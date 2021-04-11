@@ -5,7 +5,10 @@ import { Route, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TriviaComponent } from './trivia/trivia.component';
 
-const routes: Route[] = [{ path: 'trivia', component: TriviaComponent }];
+const routes: Route[] = [
+  { path: 'trivia', component: TriviaComponent },
+  { path: '', component: TriviaComponent },
+];
 @NgModule({
   declarations: [AppComponent, TriviaComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
