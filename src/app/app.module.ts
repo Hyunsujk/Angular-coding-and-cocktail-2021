@@ -8,6 +8,7 @@ import { TriviaComponent } from './trivia/trivia.component';
 const routes: Route[] = [
   { path: 'trivia', component: TriviaComponent },
   { path: '', component: TriviaComponent },
+  { path: '**', redirectTo = '' },
 ];
 @NgModule({
   declarations: [AppComponent, TriviaComponent],
