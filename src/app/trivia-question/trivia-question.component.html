@@ -1,7 +1,7 @@
 <h3>{{ question.text }}</h3>
 
 <ul>
-  <li>
-    <button class="answer">Answer</button>
+  <li *ngFor="let answer of question.answers">
+    <button class="answer">{{ answer.text }}</button>
   </li>
 </ul>
