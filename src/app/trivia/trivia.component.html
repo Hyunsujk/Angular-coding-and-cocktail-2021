@@ -1,6 +1,6 @@
 <div>
   <section>
     <p class="question-tracker">Questions {{ questions.length }}</p>
-    <app-trivia-question></app-trivia-question>
+    <app-trivia-question *ngFor="let item of questions"></app-trivia-question>
   </section>
 </div>
