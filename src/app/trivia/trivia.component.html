@@ -7,7 +7,7 @@
       (answeredEvent)="onQuestionAnswered($event)"
     ></app-trivia-question>
   </section>
-  <section class="results">
+  <section class="results" *ngIf="false">
     <p>
       You answered {{ correctAnswers }} out of {{ questions.length }} questions
       correctly.
