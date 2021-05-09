@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Question } from '../question';
 
 @Component({
   selector: 'app-trivia',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trivia.component.css'],
 })
 export class TriviaComponent implements OnInit {
-  public questions = [
+  public questions: Question[] = [
     {
       text:
         'Florence Nightingale became known as "the Lady With the Lamp" during which war?',
