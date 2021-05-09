@@ -15,5 +15,7 @@ export class TriviaQuestionComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public onAnswerSelected(index: number): void {}
+  public onAnswerSelected(index: number): void {
+    this.answeredEvent.emit(this.question.answers[index].correct);
+  }
 }
