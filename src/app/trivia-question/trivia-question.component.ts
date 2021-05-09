@@ -14,4 +14,6 @@ export class TriviaQuestionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  public onAnswerSelected(index: number): void {}
 }
