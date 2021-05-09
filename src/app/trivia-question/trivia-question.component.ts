@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Question } from '../question';
 
 @Component({
@@ -8,6 +8,8 @@ import { Question } from '../question';
 })
 export class TriviaQuestionComponent implements OnInit {
   @Input() public question: Question;
+  @Output()
+  public answeredEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() {}
 
