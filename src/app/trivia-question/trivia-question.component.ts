@@ -7,7 +7,8 @@ import { Question } from '../question';
   styleUrls: ['./trivia-question.component.css'],
 })
 export class TriviaQuestionComponent implements OnInit {
-  @Input() public questions: Question;
+  @Input() public question: Question;
+
   constructor() {}
 
   ngOnInit(): void {}
