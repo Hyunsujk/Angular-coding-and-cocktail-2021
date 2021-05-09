@@ -59,5 +59,7 @@ export class TriviaComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public onQuestionAnswered(isCorrect: boolean): void {}
+  public onQuestionAnswered(isCorrect: boolean): void {
+    if (isCorrect) this.correctAnswers++;
+  }
 }
