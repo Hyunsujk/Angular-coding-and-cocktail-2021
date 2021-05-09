@@ -4,6 +4,7 @@
     <app-trivia-question
       *ngFor="let item of questions"
       [question]="item"
+      (answeredEvent)="onQuestionAnswered($event)"
     ></app-trivia-question>
   </section>
 </div>
