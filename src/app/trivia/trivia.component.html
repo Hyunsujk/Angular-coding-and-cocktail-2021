@@ -2,8 +2,9 @@
   <section>
     <p class="question-tracker">Questions {{ questions.length }}</p>
     <app-trivia-question
-      *ngFor="let item of questions"
+      *ngFor="let item of questions; let i = index"
       [question]="item"
+      [shouldDisplay]="i === currentQuestionIndex"
       (answeredEvent)="onQuestionAnswered($event)"
     ></app-trivia-question>
   </section>
