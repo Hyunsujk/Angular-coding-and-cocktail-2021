@@ -1,6 +1,8 @@
 <div>
   <section>
-    <p class="question-tracker">Questions {{ questions.length }}</p>
+    <p class="question-tracker">
+      Questions {{ currentQuestionIndex + 1 }} of {{ questions.length }}
+    </p>
     <app-trivia-question
       *ngFor="let item of questions; let i = index"
       [question]="item"
