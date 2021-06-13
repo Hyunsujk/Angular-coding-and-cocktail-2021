@@ -5,6 +5,7 @@ import { Route, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TriviaComponent } from './trivia/trivia.component';
 import { TriviaQuestionComponent } from './trivia-question/trivia-question.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Route[] = [
   { path: 'trivia', component: TriviaComponent },
@@ -13,7 +14,7 @@ const routes: Route[] = [
 ];
 @NgModule({
   declarations: [AppComponent, TriviaComponent, TriviaQuestionComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
