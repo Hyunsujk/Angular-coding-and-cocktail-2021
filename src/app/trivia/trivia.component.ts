@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Question } from '../question';
+import { TriviaService } from '../trivia.service';
 
 @Component({
   selector: 'app-trivia',
@@ -14,9 +15,11 @@ export class TriviaComponent implements OnInit {
 
   public currentQuestionIndex = 0;
 
-  constructor() {}
+  constructor(private triviaService: TriviaService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.questions$ = this.triviaService.getTriviaQuestions();
+  }
 
   public onQuestionAnswered(isCorrect: boolean): void {
     this.currentQuestionIndex++;
