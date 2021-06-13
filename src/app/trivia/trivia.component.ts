@@ -9,8 +9,7 @@ import { Question } from '../question';
 export class TriviaComponent implements OnInit {
   public questions: Question[] = [
     {
-      text:
-        'Florence Nightingale became known as "the Lady With the Lamp" during which war?',
+      text: 'Florence Nightingale became known as "the Lady With the Lamp" during which war?',
       answers: [
         {
           correct: false,
@@ -55,11 +54,14 @@ export class TriviaComponent implements OnInit {
 
   public correctAnswers = 0;
 
+  public currentQuestionIndex = 0;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   public onQuestionAnswered(isCorrect: boolean): void {
+    this.currentQuestionIndex++;
     if (isCorrect) this.correctAnswers++;
   }
 }
