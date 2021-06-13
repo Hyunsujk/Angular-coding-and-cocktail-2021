@@ -1,5 +1,5 @@
 <div>
-  <section *ngIf="currentQuestionIndex < questions.length">
+  <section *ngIf="currentQuestionIndex < questions.length; else results">
     <p class="question-tracker">
       Questions {{ currentQuestionIndex + 1 }} of {{ questions.length }}
     </p>
@@ -10,16 +10,18 @@
       (answeredEvent)="onQuestionAnswered($event)"
     ></app-trivia-question>
   </section>
-  <section class="results">
-    <p>
-      You answered {{ correctAnswers }} out of {{ questions.length }} questions
-      correctly.
-    </p>
-    <p class="score">
-      Your score is {{ correctAnswers / questions.length | percent }}
-    </p>
-    <p>Grab a cocktail &amp; celebrate!</p>
-  </section>
+  <ng-template #results>
+    <section class="results">
+      <p>
+        You answered {{ correctAnswers }} out of
+        {{ questions.length }} questions correctly.
+      </p>
+      <p class="score">
+        Your score is {{ correctAnswers / questions.length | percent }}
+      </p>
+      <p>Grab a cocktail &amp; celebrate!</p>
+    </section>
+  </ng-template>
 </div>
 
 <!-- [] input
