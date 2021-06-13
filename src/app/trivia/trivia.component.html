@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="questions$ as questions">
   <section *ngIf="currentQuestionIndex < questions.length; else results">
     <p class="question-tracker">
       Questions {{ currentQuestionIndex + 1 }} of {{ questions.length }}
